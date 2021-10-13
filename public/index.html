@@ -8,6 +8,18 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      let socket = io();
+
+      socket.on("connect", () => {
+        console.log("Connected to server.");
+      });
+
+      socket.on("disconnect", () => {
+        console.log("disconnected from server.");
+      });
+    </script>
   </head>
   <body>
     <p>welocome to the my chat application. know me.</p>
